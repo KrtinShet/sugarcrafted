@@ -29,13 +29,52 @@ p {
   font-weight: 200;
   line-height: 1.8;
 }
-
+w-100 {
+  width: 100%;
+}
+w-50 {
+  width: 50%;
+}
+w-25 {
+  width: 25%;
+}
+.bg-primary {
+  background-color: var(--bg);
+}
+.bg-light {
+  background-color: var(--bg-light);
+}
+.bg-red {
+  background-color: #ff0000;
+}
+.d-flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.vertical-center{
+  vertical-align: middle;
+}
 /* GRID SYSTEM */
 
 .container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 110rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 calc(1rem);
 }
 
 .row {

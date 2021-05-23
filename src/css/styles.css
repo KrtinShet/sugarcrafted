@@ -1,0 +1,123 @@
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  max-width: calc(0.8 * 100vw);
+  max-height: calc(0.088 * 100vh);
+  height: 95%;
+  width: 100%;
+  margin: 4rem auto 0 auto;
+  background-color: var(--bg-light);
+  border-radius: 14px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 18px 18px 50px -10px rgba(255, 152, 31, 0.4);
+}
+
+.nav-logo img {
+  height: 5rem;
+  width: auto;
+  margin: 1rem 2rem;
+}
+
+.nav-links {
+  font-family: "Sen", sans-serif;
+  margin: 0 3rem;
+  width: fit-content;
+}
+
+.nav-link {
+  color: #482625;
+  margin: 0 2rem;
+  font-size: calc(0.85rem + 5 * ((100vw - 320px) / 1000));
+  font-weight: 400;
+  border: transparent solid 5px;
+  padding-bottom: 0.25rem;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  border-bottom: 3px solid #fa897b;
+  border-radius: 6px;
+}
+
+img.circles-illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(3rem + 50 * ((100vw - 10px) / 150));
+  width: auto;
+}
+
+img.rectangle-illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(1rem + 40 * ((100vw - 10px) / 700));
+  width: auto;
+}
+.banner-text {
+  width: max-content;
+  position: relative;
+  margin-top: 12%;
+  margin-left: calc(1.5rem + 10 * ((100vw - 100px) / 100));
+}
+.banner-text > img {
+  width: calc(5rem + 30 * ((100vw - 100px) / 100));
+  height: auto;
+  margin-bottom: 2rem;
+}
+.banner-text p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(0.5rem + 5 * ((100vw - 100px) / 700));
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.button-banner {
+  align-items: center;
+  padding: 1rem 2rem;
+  color: var(--white);
+  font-size: calc(0.5rem + 5 * ((100vw - 100px) / 700));
+  background-color: var(--secondary);
+  font-family: "Sen", sans-serif;
+  border-radius: 55px;
+}
+
+.button-banner img {
+  width: calc(0.5rem + 5 * ((100vw - 100px) / 700));
+  height: calc(0.5rem + 5 * ((100vw - 100px) / 700));
+  margin-left: 1rem;
+}
+
+img.banner-img {
+  width: calc(5rem + 50 * ((100vw - 100px) / 150));
+  /* height: auto; */
+}
+
+.waves-illustration{
+  position: static;
+  z-index: 2;
+  top: -100;
+}
+.waves-illustration  img {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1245px) {
+  .nav-links {
+    margin: 0 1rem;
+  }
+  .nav-link {
+    margin: 0 1rem;
+  }
+  .nav-logo img {
+    height: 3.5rem;
+  }
+}

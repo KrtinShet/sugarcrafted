@@ -2,16 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --bg: #fff8ef;
+  --bg-light: #fffdfa;
+  --primary: #482625;
+  --secondary: #fa897b;
+  --white: #fff;
+  --black: #000;
 }
 html,
 body {
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   left: 0;
+  background: var(--bg);
   top: 0;
   font-size: 100%;
+}
+a {
+  text-decoration: none;
 }
 /* float utilities */
 .float-left {
@@ -1302,3 +1311,4 @@ body {
     padding-bottom: 3rem !important;
   }
 }
+
