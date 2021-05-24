@@ -75,7 +75,7 @@
 
 #banner-content {
   position: absolute;
-  top: 50%;
+  top: 31vw;
   transform: translateY(-50%);
   display: flex;
   width: 100%;
@@ -179,7 +179,6 @@ h2#abtme-hding {
   #abtme-cont p {
     line-height: 32px;
     padding-bottom: 2rem;
-
   }
   #abtme-cont-img {
     width: 50%;
@@ -190,8 +189,9 @@ h2#abtme-hding {
   }
 }
 
-@media screen and (max-width: 1300px){
-  #abtme-cont {padding: 0 calc(4rem + 15 * ((100vw - 100px) / 150));
+@media screen and (max-width: 1300px) {
+  #abtme-cont {
+    padding: 0 calc(4rem + 15 * ((100vw - 100px) / 150));
     height: 300px;
   }
   #abtme-cont-img {
