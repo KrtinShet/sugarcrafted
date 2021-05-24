@@ -1,18 +1,49 @@
+#landing-section {
+  position: static;
+  height: 100%;
+  margin-top: 0 !important;
+}
+
 .navbar {
-  position: relative;
+  position: absolute;
   z-index: 4;
   display: flex;
   max-width: calc(0.8 * 100vw);
   /* max-height: calc(0.088 * 100vh); */
-  max-height: 6rem;
+  max-height: 5.75rem;
   height: 95%;
   width: 100%;
-  margin: 4rem auto 0 auto;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--bg-light);
   border-radius: 14px;
   align-items: center;
   justify-content: space-between;
   box-shadow: 18px 18px 50px -10px rgba(255, 152, 31, 0.4);
+}
+#bsvg-1 {
+  position: static;
+  display: flex;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#circles-illustration {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: calc(3rem + 50 * ((100vw - 10px) / 150));
+  width: auto;
+}
+#rectangle-illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(1rem + 40 * ((100vw - 10px) / 700));
+  /* height: calc(0.7 * 100vw); */
+  width: auto;
 }
 
 .nav-logo img {
@@ -41,36 +72,24 @@
   border-bottom: 3px solid #fa897b;
   border-radius: 6px;
 }
-img.circles-illustration {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  left: 0;
-  width: calc(0.4 * 100vw);
-  /* height: calc(0.7 * 100vh); */
-  height: auto;
-}
 
-img.rectangle-illustration {
-  z-index: 1;
+#banner-content {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: calc(1rem + 40 * ((100vw - 10px) / 700));
-  width: auto;
-}
-
-.banner {
-  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
   z-index: 3;
+  align-items: center;
+  margin: 0 auto;
 }
-.banner-text {
-  width: max-content;
-  position: relative;
-  margin-top: 12%;
-  margin-left: calc(1.5rem + 10 * ((100vw - 100px) / 100));
+
+#banner-btn-arrow {
+  width: calc(0.5rem + 5 * ((100vw - 100px) / 700));
+  height: calc(0.5rem + 5 * ((100vw - 100px) / 700));
+  margin-left: 1rem;
 }
-.banner-text > img {
+#bnr-wlcm-txt {
   width: calc(5rem + 30 * ((100vw - 100px) / 100));
   height: auto;
   margin-bottom: 2rem;
@@ -94,32 +113,89 @@ img.rectangle-illustration {
   border-radius: 55px;
 }
 
-.button-banner img {
-  width: calc(0.5rem + 5 * ((100vw - 100px) / 700));
-  height: calc(0.5rem + 5 * ((100vw - 100px) / 700));
-  margin-left: 1rem;
-}
-
 img.banner-img {
   width: calc(5rem + 50 * ((100vw - 100px) / 150));
   /* height: auto; */
 }
-img.waves-illustration{
-  z-index: 1;
-  position: absolute;
-  bottom: 1%;
-  max-width: 100%;
+#bsvg-waves {
+  position: relative;
+  bottom: calc(0.5rem + 1 * (100vh - 10rem) / 100);
+  min-width: 100%;
   width: 100%;
+  z-index: 1;
 }
 
-@media only screen and (max-width: 1245px) {
-  .nav-links {
-    margin: 0 1rem;
+/* #about-me{
+   background-color: red;
+} */
+
+h2#abtme-hding {
+  font-family: "hansief";
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+#abt-cake {
+  position: relative;
+  bottom: 5rem;
+  left: 0;
+}
+#abt-cake svg {
+  width: calc(5rem + 10 * ((100vw - 100px) / 150));
+}
+#abtme-cont {
+  width: 100%;
+  padding: 0 calc(2rem + 15 * ((100vw - 100px) / 150));
+  height: 957px;
+}
+#abtme-cont-img {
+  width: 50%;
+  height: auto;
+}
+
+#abtme-cont h3 {
+  font-family: "Poppins", sans-serif;
+  width: max-content;
+  margin: 4rem 0 2rem 0;
+}
+#abtme-cont p {
+  font-family: "Poppins", sans-serif;
+  font-size: calc(0.6rem + 3 * ((100vw - 320px) / 1000));
+  line-height: 42px;
+  font-weight: 500;
+}
+
+#abtme-heart {
+  position: absolute;
+  top: -5%;
+  right: -5%;
+}
+#abtme-heart svg {
+  width: calc(2rem + 10 * ((100vw - 100px) / 150));
+  height: auto;
+}
+
+@media screen and (max-width: 1550px) {
+  #abtme-cont p {
+    line-height: 32px;
+    padding-bottom: 2rem;
+
   }
-  .nav-link {
-    margin: 0 1rem;
+  #abtme-cont-img {
+    width: 50%;
+    height: auto;
   }
-  .nav-logo img {
-    height: 3.5rem;
+  .p-static.center {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  #abtme-cont {padding: 0 calc(4rem + 15 * ((100vw - 100px) / 150));
+    height: 300px;
+  }
+  #abtme-cont-img {
+    width: 50%;
+    height: auto;
   }
 }

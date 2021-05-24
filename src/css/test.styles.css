@@ -1,8 +1,6 @@
-NAVBAR
-.navbar {
+NAVBAR .navbar {
   position: absolute;
-  z-index: 4
-  ;
+  z-index: 4;
   display: flex;
   max-width: calc(0.8 * 100vw);
   /* max-height: calc(0.088 * 100vh); */
@@ -57,7 +55,7 @@ img.rectangle-illustration {
   top: 0;
   right: 0;
   /* height: calc(1rem + 40 * ((100vw - 10px) / 700)); */
-  height: calc(0.70*100vw);
+  height: calc(0.7 * 100vw);
   width: auto;
 }
 #landing-section {
@@ -66,8 +64,8 @@ img.rectangle-illustration {
   height: 100%;
   margin-top: 0 !important;
 }
-.banner{
-  position:static;
+.banner {
+  position: static;
   top: 50%;
   z-index: 3;
 }
@@ -112,8 +110,7 @@ img.banner-img {
   /* height: auto; */
 }
 
-
-img.waves-illustration{
+img.waves-illustration {
   z-index: 1;
   position: absolute;
   bottom: 1%;

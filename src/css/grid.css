@@ -29,14 +29,17 @@ p {
   font-weight: 200;
   line-height: 1.8;
 }
-w-100 {
+.w-100 {
   width: 100%;
 }
-w-50 {
+.w-50 {
   width: 50%;
 }
-w-25 {
+.w-25 {
   width: 25%;
+}
+.w-fit{
+  width: fit-content;
 }
 .bg-primary {
   background-color: var(--bg);
@@ -46,6 +49,9 @@ w-25 {
 }
 .bg-red {
   background-color: #ff0000;
+}
+.bg-white {
+  background-color: #fff;
 }
 .d-flex {
   display: flex;
@@ -60,13 +66,16 @@ w-25 {
   justify-content: space-between;
 }
 .justify-content-around {
-  justify-content: space-around;
+  justify-content: space-around !important;
 }
 .justify-content-evenly {
   justify-content: space-evenly;
 }
 .vertical-center{
   vertical-align: middle;
+}
+.center{
+  margin: 0 auto;
 }
 /* GRID SYSTEM */
 

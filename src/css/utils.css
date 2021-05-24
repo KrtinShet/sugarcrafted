@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "hansief";
+  font-weight: normal;
+  font-weight: 400;
+  src: url("./../others/Hansief.woff") format("woff");
+}
 * {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   --bg: #fff8ef;
@@ -22,6 +28,15 @@ body {
 }
 a {
   text-decoration: none;
+}
+.rounded-corners-25{
+  border-radius: 25px;
+}
+.p-relative {
+  position: relative !important;
+}
+.p-static {
+  position: static !important;
 }
 /* float utilities */
 .float-left {
@@ -1312,4 +1327,5 @@ a {
     padding-bottom: 3rem !important;
   }
 }
+
 
