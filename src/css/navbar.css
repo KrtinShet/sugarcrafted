@@ -39,9 +39,9 @@
   border-bottom: 3px solid #fa897b;
   border-radius: 6px;
 }
-@media (min-width: 576px) {
+@media (min-width: 576px) { /* sm */
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* md */
   #custom-navbar{
     max-height: 55px;
   }
@@ -58,7 +58,7 @@
     margin: 0 0.75rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) { /*lg */
   #custom-navbar{
     max-height: 80px;
   }
@@ -75,7 +75,7 @@
     margin: 0 2rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {  /*xl */
 }
-@media (min-width: 1400px) {
+@media (min-width: 1400px) {   /*xxl */
 }

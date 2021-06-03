@@ -104,7 +104,7 @@ img.banner-img {
   width: calc(5rem + 50 * ((100vw - 100px) / 150));
 }
 
-/******************************* ABOUT ME SECTION *******************************/
+/******************************* SATRT ABOUT ME SECTION *******************************/
 
 h2#abtme-hding {
   font-family: "hansief";
@@ -112,8 +112,9 @@ h2#abtme-hding {
   margin: 0 auto;
   letter-spacing: 2px;
 }
-#abt-cake {
-  width: calc(5rem + 10 * ((100vw - 100px) / 150));
+svg#abt-cake {
+  width: calc(5rem + 10 * ((100vw - 100px) / 250));
+  height: auto;
 }
 #abt-me {
   margin-top: 4rem;
@@ -159,15 +160,23 @@ svg#abtme-heart {
   margin: 0 auto;
 }
 
-/******************************* TESTMONIALS *******************************/
+#social-links-abtme svg {
+  width: 3rem;
+}
+
+/******************************* END ABOUT ME SECTION *******************************/
+
+/******************************* START TESTMONIALS *******************************/
 #testmonials {
   margin-top: 3rem !important;
 }
+/******************************* END TESTMONIALS *******************************/
 
 /******************************* CUSTOM CARD 1 *******************************/
 .custom-card-1 {
-  width: 440px;
-  height: 247px;
+  --cc1w: 440px;
+  width: var(--cc1w) !important;
+  height: calc(var(--cc1w)/1.78) !important;
   background: #ffebeb;
   border-radius: 30px;
   box-shadow: 18px 18px 50px -10px #ffd6f6;
@@ -177,8 +186,10 @@ svg#abtme-heart {
 }
 
 .custom-card-1-head {
+  text-align: center;
   flex: 2;
 }
+
 .custom-card-1-heading {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -188,6 +199,13 @@ svg#abtme-heart {
   text-align: center;
   margin-bottom: 10px;
 }
+.custom-card-1-img {
+  width: 8rem;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
 .custom-card-1-lead-text {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
@@ -196,23 +214,121 @@ svg#abtme-heart {
   line-height: 18px;
 }
 .custom-card-1-body {
+  position: relative;
   flex: 3;
 }
+.custom-card-1-body::before {
+  position: absolute;
+  content: "";
+  background-image: url("./../img/about-me-heart.svg");
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background-size: 6rem;
+  background-repeat: no-repeat;
+}
 
+#start-comma {
+  position: absolute;
+  top: -7;
+  left: -7;
+  height: 1rem !important;
+  width: auto;
+}
+#end-comma {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  width: 1rem;
+}
 .custom-card-1-text {
+  position: relative;
   font-family: "gilroy", sans-serif;
-  font-size: 15px;
+  font-size: calc(14px + (16 - 14) * ((100vw - 340px) / 1000));
   line-height: 24px;
   text-align: center;
+  padding: 0.25rem;
 }
 
-/******************************* MEDIA QUERIES *******************************/
+/******************************* END CUSTOM CARD 1 *******************************/
 
-@media (min-width: 576px) and( max-width: 767px) {
+/******************************* START CUSTOM DIVIDER *******************************/
+
+.custom-divider {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
+.custom-divider > span {
+  position: relative;
+  display: inline-block;
+  font-family: "hansief", sans-serif;
+  font-size: calc(2rem + 10 * ((100vw - 320px) / 900));
+  color: var(--primary);
+  letter-spacing: 0.08em;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.custom-divider > span:before,
+.custom-divider > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 6px;
+  background: #fb978b;
+  border-radius: 20%;
+}
+
+.custom-divider > span:before {
+  right: 100%;
+  margin-right: 3rem;
+}
+
+.custom-divider > span:after {
+  left: 100%;
+  margin-left: 3rem;
+}
+/******************************* END CUSTOM DIVIDER *******************************/
+
+/****************************** START CUSTOM CARD 2 ******************************/
+.custom-card-2 {
+  --cc2w: 430px;
+  background: #fff5f5;
+  border-radius: 18px;
+  width: var(--cc2w);
+  height: calc(1.2 * var(--cc2w));
+  box-shadow: 18px 18px 50px -10px rgba(250, 86, 98, 0.5);
+  text-align: center;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  justify-content: space-evenly;
+}
+
+.custom-card-2-img{
+  margin-top: 1rem;
+  border-radius: 50%;
+}
+
+/******************************* END CUSTOM CARD 2 *******************************/
+
+/******************************* START MEDIA QUERIES *******************************/
+
+@media (min-width: 576px) {
+}
+
 @media (min-width: 768px) {
   #banner {
     top: calc(0.2 * 100vw);
+  }
+  .button-banner {
+    padding: 0.7rem 1.2rem;
   }
 
   img.banner-img {
@@ -230,12 +346,49 @@ svg#abtme-heart {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+  #social-links-abtme svg {
+    width: 1.75rem !important;
+  }
+
+  .custom-card-1 {
+    --cc1w: 350px;
+  }
+
+  .custom-card-1-heading {
+    font-size: 14px;
+    line-height: 12px;
+    margin-bottom: 7px;
+  }
+  .custom-card-1-img {
+    width: 4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .custom-card-1-lead-text {
+    font-size: 11px;
+    line-height: 8px;
+  }
+  .custom-card-1-body::before {
+    background-size: 3.45rem;
+  }
+
+  #start-comma {
+    top: -10px;
+    left: -20px;
+    height: 0.6rem;
+  }
+  .custom-card-1-text{
+    font-size: calc(12px + (16 - 14) * ((100vw - 340px) / 1100));
+  }
 }
+
 @media (min-width: 992px) {
   #banner {
     top: calc(0.15 * 100vw);
   }
-
+  .button-banner {
+    padding: 0.8rem 1.6rem;
+  }
   img.banner-img {
     width: calc(5rem + 45 * ((100vw - 100px) / 150));
   }
@@ -247,8 +400,28 @@ svg#abtme-heart {
     font-size: 1rem;
     line-height: 1.35rem;
   }
+
+  #social-links-abtme {
+    width: min-content;
+    padding: 1rem 0.75rem;
+    height: 65%;
+    padding: 0;
+  }
+
+  #social-links-abtme svg {
+    width: 2rem !important;
+  }
+  #start-comma {
+    top: -10px;
+    left: -20px;
+    height: 0.75rem;
+  }
 }
+
 @media (min-width: 1200px) {
+  .button-banner {
+    padding: 1rem 2rem;
+  }
   #abtme-text-container {
     padding: 0 !important;
   }
@@ -264,7 +437,46 @@ svg#abtme-heart {
   .banner {
     max-width: 1140px;
   }
+
+  .custom-card-1 {
+    --cc1w: 370px;
+  }
+
+  .custom-card-1-heading {
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  .custom-card-1-img {
+    width: 6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .custom-card-1-lead-text {
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .custom-card-1-body::before {
+    background-size: 5rem;
+  }
+
+  .custom-card-1-text::before {
+    height: 1rem;
+    width: auto;
+  }
+  .custom-card-1-text::after {
+  }
+  #social-links-abtme svg {
+    width: 2.5rem;
+  }
+
+  #start-comma {
+    top: -5px;
+    left: -5px;
+    height: 0.75rem;
+  }
 }
+
 @media (min-width: 1400px) {
   #banner {
     top: calc(0.11 * 100vw);
@@ -281,4 +493,8 @@ svg#abtme-heart {
     font-size: calc(1rem + 3 * ((100vw - 320px) / 1000));
     line-height: 2rem;
   }
+  .custom-card-1 {
+    --cc1w: 440px;
+  }
+
 }

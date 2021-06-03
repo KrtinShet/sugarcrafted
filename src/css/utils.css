@@ -3138,6 +3138,11 @@ progress {
   visibility: hidden !important;
 }
 
+.center-div{
+  width: fit-content;
+  margin: 0 auto;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
