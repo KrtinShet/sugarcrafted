@@ -2121,11 +2121,26 @@ progress {
 .top-0 {
   top: 0 !important;
 }
+.top-10 {
+  top: 10% !important;
+}
+.top-25 {
+  top: 0% !important;
+}
 
 .top-50 {
   top: 50% !important;
 }
 
+.top-60 {
+  top: 60% !important;
+}
+.top-70 {
+  top: 70% !important;
+}
+.top-80 {
+  top: 80% !important;
+}
 .top-100 {
   top: 100% !important;
 }
@@ -2155,6 +2170,12 @@ progress {
 
 .start-100 {
   left: 100% !important;
+}
+.start-80 {
+  left: 80% !important;
+}
+.start-90 {
+  left: 90% !important;
 }
 
 .end-0 {
@@ -3139,8 +3160,8 @@ progress {
 }
 
 .center-div{
-  width: fit-content;
-  margin: 0 auto;
+  width: fit-content !important;
+  margin: 0 auto !important;
 }
 
 @media (min-width: 576px) {

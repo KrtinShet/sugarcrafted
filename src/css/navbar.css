@@ -1,37 +1,33 @@
-#custom-navbar {
-  position: absolute;
-  z-index: 4;
+nav#custom-navbar {
+  z-index: 5;
   display: flex;
-  max-height: 80px;
-  height: 100%;
-  width: 100%;
-  top: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fffdfa;
-  border-radius: 14px;
-  align-items: center;
   justify-content: space-between;
+  border-radius: 14px;
+  top: 0.9rem;
+  background-color: #fffdfa;
   box-shadow: 18px 18px 50px -10px rgba(255, 152, 31, 0.4);
+  max-height: 80px;
+  align-items: center;
+}
+#custom-nav-logo {
+  height: 50px;
+  width: auto;
+  margin: 0 1.5rem !important;
+  /* padding: 0 2rem !important; */
 }
 
-#custom-nav-logo {
-  height: 80px;
-  width: auto;
-  margin: 0 2rem;
-}
 #custom-nav-links {
   font-family: "Sen", sans-serif;
-  margin: 0 3rem;
+  margin: 0 1.2rem !important;
   width: fit-content;
 }
 .custom-nav-link {
   color: #482625;
-  margin: 0 2rem;
-  font-size: calc(0.85rem + 5 * ((100vw - 320px) / 1000));
+  margin: 0 1rem !important;
+  font-size: 0.9rem;
   font-weight: 400;
   border: transparent solid 5px;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.25rem !important;
 }
 
 .custom-nav-link:hover,
@@ -39,43 +35,44 @@
   border-bottom: 3px solid #fa897b;
   border-radius: 6px;
 }
-@media (min-width: 576px) { /* sm */
+
+@media (min-width: 576px) {
+  /* THIS IS FOR MOBILE VIEW */
 }
-@media (min-width: 768px) { /* md */
-  #custom-navbar{
-    max-height: 55px;
+@media (min-width: 768px) {
+  nav#custom-navbar {
+    top: 1.3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  nav#custom-navbar {
+    top: 1.45rem;
   }
   #custom-nav-logo {
-    height: 45px;
-    position: relative;
-    bottom: 40%;
+    height: 68px;
+    margin: 0 2rem !important;
   }
   .custom-nav-link {
-    margin: 0 0.75rem;
-    font-size: calc(0.55rem + 5 * ((100vw - 320px) / 1000));
-  }
-  #custom-nav-links {
-    margin: 0 0.75rem;
+    margin: 0 1.7rem !important;
+    font-size: 0.95rem;
   }
 }
-@media (min-width: 992px) { /*lg */
-  #custom-navbar{
-    max-height: 80px;
+
+@media (min-width: 1200px) {
+  /*xl */
+  nav#custom-navbar {
+    top: 2rem;
   }
   #custom-nav-logo {
     height: 80px;
-    position: relative;
-    bottom: 20%;
-  }
-  .custom-nav-link {
-    margin: 0 1.5rem;
-    font-size: calc(0.8rem + 5 * ((100vw - 320px) / 1000));
+    margin: 0 2rem !important;
   }
   #custom-nav-links {
-    margin: 0 2rem;
+    margin: 0 3rem !important;
   }
-}
-@media (min-width: 1200px) {  /*xl */
-}
-@media (min-width: 1400px) {   /*xxl */
+  .custom-nav-link {
+    margin: 0 2rem !important;
+    font-size: 1.1rem;
+  }
 }
