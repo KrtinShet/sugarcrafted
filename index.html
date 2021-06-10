@@ -28,6 +28,7 @@
 
   <body class="container-fluid user-select-none">
     <section id="landing-section">
+      <div class="mobile-nav-floating-btn-screen"></div>
       <img
         class="hide-from-desktop mobile-sugarcrafted-logo"
         src="./src/img/sugarcrafted.png"
@@ -80,7 +81,22 @@
           </svg>
         </a>
       </div>
-      <nav class="mobile-nav-floating-btn"></nav>
+      <nav class="mobile-nav-floating-btn">
+        <div class="mobile-nav-floating-btn-menu">
+          <ul>
+            <a href="#landing-section">Home</a>
+            <a href="#about-me">About Us</a>
+            <a href="#cakes-gallery">Pâtisserie</a>
+            <a href="#contact-me">Contact Us</a>
+          </ul>
+        </div>
+        <div class="mobile-nav-floating-btn-icon">
+          <input type="checkbox" onclick="showMenu()" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
       <nav
         id="custom-navbar"
         class="container position-absolute start-50 translate-middle-x"
@@ -93,10 +109,10 @@
           />
         </div>
         <div id="custom-nav-links">
-          <a href="#" class="custom-nav-link custom-nav-link-active">Home</a>
-          <a href="#" class="custom-nav-link">About Us</a>
-          <a href="#" class="custom-nav-link">Pâtisserie</a>
-          <a href="#" class="custom-nav-link">Contact Us</a>
+          <a href="#landing-section" class="custom-nav-link">Home</a>
+          <a href="#about-me" class="custom-nav-link">About Us</a>
+          <a href="#cakes-gallery" class="custom-nav-link">Pâtisserie</a>
+          <a href="#contact-me" class="custom-nav-link">Contact Us</a>
         </div>
       </nav>
 
@@ -773,7 +789,7 @@
       </svg>
     </section>
 
-    <section id="contact-me" class="position-relative">
+    <!-- <section id="contact-me" class="position-relative">
       <div class="custom-divider container-fluid">
         <span> Contact ME </span>
       </div>
@@ -841,6 +857,8 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <script src="./src/script/index.js"></script>
   </body>
 </html>
