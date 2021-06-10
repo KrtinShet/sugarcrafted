@@ -20,17 +20,77 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./src/img/favic.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/css/materialform.css">
+    <link rel="stylesheet" href="./src/css/materialform.css" />
     <link rel="stylesheet" href="./src/css/utils.css" />
-    <link rel="stylesheet" href="./src/css/navbar.css" />
     <link rel="stylesheet" href="./src/css/styles.css" />
     <title>Home | SugarCrafted</title>
   </head>
-  <body class="container-fluid">
-    <section id="landing" class="position-relative container-fluid">
-      <nav id="custom-navbar" class="container position-absolute start-50 translate-middle-x">
-        <div c>
-          <img id="custom-nav-logo" src="./src/img/sugarcrafted.png" alt="sugarcrafted logo"/>
+
+  <body class="container-fluid user-select-none">
+    <section id="landing-section">
+      <img
+        class="hide-from-desktop mobile-sugarcrafted-logo"
+        src="./src/img/sugarcrafted.png"
+        alt=""
+      />
+      <img
+        class="hide-from-desktop mobile-landingbg-waves"
+        src="./src/img/waves.svg"
+        alt=""
+      />
+      <img
+        class="hide-from-desktop mobile-landing-cake"
+        src="./src/img/image-landing-page.png"
+        alt=""
+      />
+      <div
+        class="
+          hide-from-desktop
+          position-absolute
+          top-50
+          start-50
+          translate-middle
+          z-index-10
+          mobile-banner-content
+        "
+        id=" "
+      >
+        <h1>Welcome To <br />SugarCrafted</h1>
+        <p class="banner-text">
+          where your sweet cravings <br />
+          are hand crafted with love! <br />
+          have a peep into the world of my <br />
+          sugary deliciousness and <br />
+          how we get it done here.
+        </p>
+        <a class="button-banner mobile-button-banner" href="#"
+          >Explore
+          <svg
+            id="banner-btn-arrow"
+            width="22"
+            height="36"
+            viewBox="0 0 22 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 30.8571L13.75 18L0 5.14286L2.75 0L22 18L2.75 36L0 30.8571Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+      <nav class="mobile-nav-floating-btn"></nav>
+      <nav
+        id="custom-navbar"
+        class="container position-absolute start-50 translate-middle-x"
+      >
+        <div>
+          <img
+            id="custom-nav-logo"
+            src="./src/img/sugarcrafted.png"
+            alt="sugarcrafted logo"
+          />
         </div>
         <div id="custom-nav-links">
           <a href="#" class="custom-nav-link custom-nav-link-active">Home</a>
@@ -39,7 +99,17 @@
           <a href="#" class="custom-nav-link">Contact Us</a>
         </div>
       </nav>
-      <div class="position-absolute top-50 start-50 translate-middle container" id="banner" >
+
+      <div
+        class="
+          position-absolute
+          start-50
+          translate-middle
+          container
+          hide-from-mobile
+        "
+        id="banner"
+      >
         <div class="container row align-items-center w-fit mx-auto">
           <div class="col-7">
             <h1 id="bnr-wlcm-txt">Welcome To SugarCrafted</h1>
@@ -50,121 +120,154 @@
             </p>
             <a class="button-banner" href="#"
               >Explore
-              <svg id="banner-btn-arrow" width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 30.8571L13.75 18L0 5.14286L2.75 0L22 18L2.75 36L0 30.8571Z" fill="white"/>
+              <svg
+                id="banner-btn-arrow"
+                width="22"
+                height="36"
+                viewBox="0 0 22 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 30.8571L13.75 18L0 5.14286L2.75 0L22 18L2.75 36L0 30.8571Z"
+                  fill="white"
+                />
               </svg>
             </a>
           </div>
           <div class="col-5 align-content-center">
-            <img src="./src/img/image-landing-page.png" alt="" class="banner-img img-fluid"/>
+            <img
+              src="./src/img/image-landing-page.png"
+              alt=""
+              class="banner-img img-fluid"
+            />
           </div>
         </div>
       </div>
     </section>
-
     <section id="about-me" class="position-relative mb-5">
-        <div class="aboutme-header position-relative">
-          <h2 id="about-me-heading" class="position-absolute top-0 start-50 translate-middle-x">ABOUT ME</h2>
-          <svg class="position-absolute top-0 start-0" id="abt-cake" width="207" height="154" viewBox="0 0 207 154" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M-108.823 67.2285C-112.256 40.2633 -93.5354 15.5332 -66.5404 12.3431C-32.9743 8.37641 11.6695 4.02059 46 4.00007C79.1876 3.98024 121.576 7.98749 154.527 11.8247C183.073 15.1488 202.011 42.4037 196.089 70.5252L180.182 146.061C179.208 150.688 175.126 154 170.397 154H-88.9663C-94.0007 154 -98.2502 150.257 -98.8862 145.263L-108.823 67.2285Z" fill="#DDB98A"/>
-            <path d="M151 152L175.5 151L186 107.5L196 57.5L160.5 57C160.5 57 158 82.5 156 103.5C154.077 123.691 151 152 151 152Z" fill="#D1835C" fill-opacity="0.8"/>
-            <path d="M-106.839 66.9758C-110.136 41.0777 -92.1614 17.3848 -66.3057 14.3293C-32.7496 10.3638 11.7956 6.02052 46.0012 6.00007C79.0658 5.98031 121.357 9.97558 154.296 13.8112C181.632 16.9945 199.82 43.1029 194.132 70.1131L178.225 145.649C177.446 149.35 174.18 152 170.397 152H-88.9663C-92.9938 152 -96.3934 149.006 -96.9022 145.011L-106.839 66.9758Z" stroke="black" stroke-width="4"/>
-            <path d="M46 4.00007C11.6695 4.02059 -32.9743 8.37641 -66.5404 12.3431C-93.5354 15.5332 -112.256 40.2633 -108.823 67.2285L-106.387 86.3576C-104.432 101.709 -86.582 109.838 -72.9718 102.472C-53.3044 91.8284 -27.0122 80.2017 -5 79.5C21.4861 78.6557 35.053 94.6688 61.5 93C98.4666 90.6675 110.648 49.2694 147.5 53C153.764 53.6341 160.778 55.7515 167.473 58.3707C181.758 63.9591 199.02 56.6094 202.181 41.5992C204.797 29.1782 196.46 17.1492 183.876 15.4807C151.145 11.1405 90.3555 3.97356 46 4.00007Z" fill="#E47E7B"/>
-            <path d="M191.163 14.0286L167.911 11C167.911 11 167.995 26.396 166.5 36C165.058 45.2667 161 58 161 58L172 62.4857L186.5 61L198 55L203.5 47.5L205 38.5L203.5 29L199.079 21.0952L191.163 14.0286Z" fill="#C17472"/>
-            <path d="M199.722 38.993C199.04 44.4735 194.119 54.6977 190.466 54.2429C186.812 53.7881 189.869 43.1934 190.552 37.7129C191.234 32.2323 190.91 21.9886 194.564 22.4435C198.217 22.8983 200.404 33.5124 199.722 38.993Z" fill="#A86261"/>
-            <path d="M45.9988 2.00007C11.5433 2.02067 -33.199 6.38905 -66.7751 10.3569C-94.9095 13.6817 -114.376 39.4489 -110.807 67.4811L-108.371 86.6103C-106.219 103.506 -86.7306 112.192 -72.0199 104.231C-52.3753 93.5996 -26.4423 82.1845 -4.93628 81.499C7.67055 81.0971 17.2416 84.6263 27.1065 88.2638L27.573 88.4358C37.5896 92.1279 47.9437 95.8594 61.6259 94.996C79.8988 93.843 92.3503 83.4772 103.97 73.8034C104.589 73.2884 105.205 72.7755 105.82 72.266C118.106 62.0798 129.778 53.2162 147.299 54.9898C153.303 55.5976 160.123 57.643 166.745 60.2333C181.942 66.1786 200.672 58.4693 204.138 42.0114C206.989 28.4745 197.9 15.3228 184.139 13.498C151.41 9.1581 90.5016 1.97348 45.9988 2.00007Z" stroke="black" stroke-width="4"/>
-            <circle cx="13.5" cy="28.5" r="4" fill="#F6F8F9" stroke="black" stroke-width="3"/>
-            <circle cx="59.5" cy="81.5" r="4" fill="#F6F8F9" stroke="black" stroke-width="3"/>
-            <circle cx="127.5" cy="28.5" r="4" fill="#F6F8F9" stroke="black" stroke-width="3"/>
-            <circle cx="176.5" cy="52.5" r="4" fill="#F6F8F9" stroke="black" stroke-width="3"/>
-          </svg>
-          </div>
-        </div>
-        <div class="row bg-white rounded-end-10 container w-fit mx-auto aboutme-content">
-          <div class="col-4"><img src="./src/img/client-photo.png" class="img-fluid" alt="SugarCrafted Owner"/></div>         
-          <div class="position-absolute" id="social-links-abtme">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/">
-                  <div>
-                    <svg
-                      width="55"
-                      height="55"
-                      viewBox="0 0 55 55"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M27.5 48.125C38.8909 48.125 48.125 38.8909 48.125 27.5C48.125 16.1091 38.8909 6.875 27.5 6.875C16.1091 6.875 6.875 16.1091 6.875 27.5C6.875 38.8909 16.1091 48.125 27.5 48.125Z"
-                        stroke="#482625"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M36.0938 18.9062H32.6562C31.2887 18.9062 29.9772 19.4495 29.0102 20.4165C28.0432 21.3835 27.5 22.695 27.5 24.0625V48.125"
-                        stroke="#482625"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M20.625 30.9375H34.375"
-                        stroke="#482625"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">
-                  <div>
-                    <svg
-                      width="55"
-                      height="55"
-                      viewBox="0 0 55 55"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M27.5 36.0938C32.2462 36.0938 36.0938 32.2462 36.0938 27.5C36.0938 22.7538 32.2462 18.9062 27.5 18.9062C22.7538 18.9062 18.9062 22.7538 18.9062 27.5C18.9062 32.2462 22.7538 36.0938 27.5 36.0938Z"
-                        stroke="#482625"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M36.9531 7.73438H18.0469C12.3514 7.73438 7.73438 12.3514 7.73438 18.0469V36.9531C7.73438 42.6486 12.3514 47.2656 18.0469 47.2656H36.9531C42.6486 47.2656 47.2656 42.6486 47.2656 36.9531V18.0469C47.2656 12.3514 42.6486 7.73438 36.9531 7.73438Z"
-                        stroke="#482625"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M38.6719 18.0469C39.6211 18.0469 40.3906 17.2774 40.3906 16.3281C40.3906 15.3789 39.6211 14.6094 38.6719 14.6094C37.7226 14.6094 36.9531 15.3789 36.9531 16.3281C36.9531 17.2774 37.7226 18.0469 38.6719 18.0469Z"
-                        fill="#482625"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="col-8">          
-            <div class="position-relative" id="about-me-text-container">
-              <h3 class="about-me-p-heading">Hey All!</h3>
-              <p class="about-me-p-text-style"> I’m Sanjana , working with an IT company <br /> and a baker-at-home my intrest in baking Began<br /> During My School days And i learnt the art of baking then<br /> my circle of people loved my baking and encouraged me to<br /> take my talent to next step that is how the idea <br />“ <span style="color: #f95688">Sugarcrafted</span>” Initiated almost about a year ago!<br /></p>
-              <p class="about-me-p-text-style"> About Sugarcrafted -baking is a form of art and craft to me,<br /> hence my sister and i came up with “<span style="color: #f95688">Sugarcrafted</span>”</p>
-              <p class="about-me-p-text-style"> What do i do at sugarcrafted- Everything is baked eggless,<br /> from simple cakes to customised ones with cream it<br /> frodant,<br /> cupcakes, cakesicles and rice paste flowers. superior quality<br /> ingredients are handpicked to <span style="color: #ff800b">serve</span> my clients with the <span style="color: #ff800b">Best</span>!</p>
-            </div>
-          </div>
-        </div>
-    </section>
+      <div class="position-relative">
+        <h2
+          id="about-me-heading"
+          class="position-absolute top-0 start-50 translate-middle-x"
+        >
+          ABOUT ME
+        </h2>
+        <svg
+          class="position-absolute top-0 start-0"
+          id="abt-cake"
+          width="207"
+          height="154"
+          viewBox="0 0 207 154"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M-108.823 67.2285C-112.256 40.2633 -93.5354 15.5332 -66.5404 12.3431C-32.9743 8.37641 11.6695 4.02059 46 4.00007C79.1876 3.98024 121.576 7.98749 154.527 11.8247C183.073 15.1488 202.011 42.4037 196.089 70.5252L180.182 146.061C179.208 150.688 175.126 154 170.397 154H-88.9663C-94.0007 154 -98.2502 150.257 -98.8862 145.263L-108.823 67.2285Z"
+            fill="#DDB98A"
+          />
+          <path
+            d="M151 152L175.5 151L186 107.5L196 57.5L160.5 57C160.5 57 158 82.5 156 103.5C154.077 123.691 151 152 151 152Z"
+            fill="#D1835C"
+            fill-opacity="0.8"
+          />
+          <path
+            d="M-106.839 66.9758C-110.136 41.0777 -92.1614 17.3848 -66.3057 14.3293C-32.7496 10.3638 11.7956 6.02052 46.0012 6.00007C79.0658 5.98031 121.357 9.97558 154.296 13.8112C181.632 16.9945 199.82 43.1029 194.132 70.1131L178.225 145.649C177.446 149.35 174.18 152 170.397 152H-88.9663C-92.9938 152 -96.3934 149.006 -96.9022 145.011L-106.839 66.9758Z"
+            stroke="black"
+            stroke-width="4"
+          />
+          <path
+            d="M46 4.00007C11.6695 4.02059 -32.9743 8.37641 -66.5404 12.3431C-93.5354 15.5332 -112.256 40.2633 -108.823 67.2285L-106.387 86.3576C-104.432 101.709 -86.582 109.838 -72.9718 102.472C-53.3044 91.8284 -27.0122 80.2017 -5 79.5C21.4861 78.6557 35.053 94.6688 61.5 93C98.4666 90.6675 110.648 49.2694 147.5 53C153.764 53.6341 160.778 55.7515 167.473 58.3707C181.758 63.9591 199.02 56.6094 202.181 41.5992C204.797 29.1782 196.46 17.1492 183.876 15.4807C151.145 11.1405 90.3555 3.97356 46 4.00007Z"
+            fill="#E47E7B"
+          />
+          <path
+            d="M191.163 14.0286L167.911 11C167.911 11 167.995 26.396 166.5 36C165.058 45.2667 161 58 161 58L172 62.4857L186.5 61L198 55L203.5 47.5L205 38.5L203.5 29L199.079 21.0952L191.163 14.0286Z"
+            fill="#C17472"
+          />
+          <path
+            d="M199.722 38.993C199.04 44.4735 194.119 54.6977 190.466 54.2429C186.812 53.7881 189.869 43.1934 190.552 37.7129C191.234 32.2323 190.91 21.9886 194.564 22.4435C198.217 22.8983 200.404 33.5124 199.722 38.993Z"
+            fill="#A86261"
+          />
+          <path
+            d="M45.9988 2.00007C11.5433 2.02067 -33.199 6.38905 -66.7751 10.3569C-94.9095 13.6817 -114.376 39.4489 -110.807 67.4811L-108.371 86.6103C-106.219 103.506 -86.7306 112.192 -72.0199 104.231C-52.3753 93.5996 -26.4423 82.1845 -4.93628 81.499C7.67055 81.0971 17.2416 84.6263 27.1065 88.2638L27.573 88.4358C37.5896 92.1279 47.9437 95.8594 61.6259 94.996C79.8988 93.843 92.3503 83.4772 103.97 73.8034C104.589 73.2884 105.205 72.7755 105.82 72.266C118.106 62.0798 129.778 53.2162 147.299 54.9898C153.303 55.5976 160.123 57.643 166.745 60.2333C181.942 66.1786 200.672 58.4693 204.138 42.0114C206.989 28.4745 197.9 15.3228 184.139 13.498C151.41 9.1581 90.5016 1.97348 45.9988 2.00007Z"
+            stroke="black"
+            stroke-width="4"
+          />
+          <circle
+            cx="13.5"
+            cy="28.5"
+            r="4"
+            fill="#F6F8F9"
+            stroke="black"
+            stroke-width="3"
+          />
+          <circle
+            cx="59.5"
+            cy="81.5"
+            r="4"
+            fill="#F6F8F9"
+            stroke="black"
+            stroke-width="3"
+          />
+          <circle
+            cx="127.5"
+            cy="28.5"
+            r="4"
+            fill="#F6F8F9"
+            stroke="black"
+            stroke-width="3"
+          />
+          <circle
+            cx="176.5"
+            cy="52.5"
+            r="4"
+            fill="#F6F8F9"
+            stroke="black"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
 
+      <div class="about-me-content container rounded-3">
+        <div class="about-me-content-image">
+          <img
+            src="./src/img/client-photo.png"
+            class="img-fluid"
+            alt="sugarcrafted owner"
+          />
+        </div>
+
+        <div class="about-me-content-text-container">
+          <h3 class="about-me-text-header">Hey All!</h3>
+          <div class="about-me-text-paragraph-container">
+            <p class="about-me-text-paragraph">
+              I’m Sanjana , working with an IT company <br />
+              and a baker-at-home my intrest in baking Began<br />
+              During My School days And i learnt the art of baking then<br />
+              my circle of people loved my baking and encouraged me to<br />
+              take my talent to next step that is how the idea <br />“
+              <span style="color: #f95688">Sugarcrafted</span>” Initiated almost
+              about a year ago!<br />
+            </p>
+            <p class="about-me-text-paragraph">
+              About Sugarcrafted -baking is a form of art and craft to me,<br />
+              hence my sister and i came up with “<span style="color: #f95688"
+                >Sugarcrafted</span
+              >”
+            </p>
+            <p class="about-me-text-paragraph">
+              What do i do at sugarcrafted- Everything is baked eggless,<br />
+              from simple cakes to customised ones with cream it<br />
+              frodant,<br />
+              cupcakes, cakesicles and rice paste flowers. superior quality<br />
+              ingredients are handpicked to
+              <span style="color: #ff800b">serve</span> my clients with the
+              <span style="color: #ff800b">Best</span>!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="testmonials">
       <div class="custom-divider mb-5 container-fluid">
         <span> Testimonials </span>
@@ -172,7 +275,7 @@
       <div class="container-fluid mt-5 align-items-center">
         <div class="row m-5">
           <div class="col col-md-6 col-lg-4 my-3">
-                        <div class="center-div">
+            <div class="center-div">
               <div class="custom-card-1">
                 <div class="custom-card-1-head">
                   <img
@@ -232,7 +335,7 @@
             </div>
           </div>
           <div class="col col-md-6 col-lg-4">
-                        <div class="center-div">
+            <div class="center-div">
               <div class="custom-card-1">
                 <div class="custom-card-1-head">
                   <img
@@ -292,7 +395,7 @@
             </div>
           </div>
           <div class="col col-md-6 col-lg-4">
-                        <div class="center-div">
+            <div class="center-div">
               <div class="custom-card-1">
                 <div class="custom-card-1-head">
                   <img
@@ -352,7 +455,7 @@
             </div>
           </div>
           <div class="col col-md-6 col-lg-4">
-                        <div class="center-div">
+            <div class="center-div">
               <div class="custom-card-1">
                 <div class="custom-card-1-head">
                   <img
@@ -412,7 +515,7 @@
             </div>
           </div>
           <div class="col col-md-6 col-lg-4">
-                        <div class="center-div">
+            <div class="center-div">
               <div class="custom-card-1">
                 <div class="custom-card-1-head">
                   <img
@@ -472,7 +575,7 @@
             </div>
           </div>
           <div class="col col-md-6 col-lg-4">
-                        <div class="center-div">
+            <div class="center-div">
               <div class="custom-card-1">
                 <div class="custom-card-1-head">
                   <img
@@ -534,12 +637,22 @@
         </div>
       </div>
     </section>
-    
     <section id="cakes-gallery" class="container-fluid position-relative">
-      <svg  class="position-absolute start-0" id="cakes-gallery-box-1" width="146" height="443" viewBox="0 0 146 443" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M-90 189H146V388C146 418.376 121.376 443 91 443H-90V189Z" fill="#FFE6B1"/>
-        <circle cx="-26" cy="171" r="171" fill="#FFE6B1"/>
-        </svg>
+      <svg
+        class="position-absolute start-0"
+        id="cakes-gallery-box-1"
+        width="146"
+        height="443"
+        viewBox="0 0 146 443"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-90 189H146V388C146 418.376 121.376 443 91 443H-90V189Z"
+          fill="#FFE6B1"
+        />
+        <circle cx="-26" cy="171" r="171" fill="#FFE6B1" />
+      </svg>
       <div class="custom-divider container-fluid">
         <span> Pâtisserie </span>
       </div>
@@ -643,90 +756,91 @@
           </div>
         </div>
       </div>
-      <svg class="position-absolute bottom-0 end-0" id="cakes-gallery-box-2" width="197" height="441" viewBox="0 0 197 441" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 187H236V441H55C24.6243 441 0 416.376 0 386V187Z" fill="#FFE6B1"/>
-        <circle cx="171" cy="171" r="171" fill="#FFE6B1"/>
-        </svg>
-        
+      <svg
+        class="position-absolute bottom-0 end-0"
+        id="cakes-gallery-box-2"
+        width="197"
+        height="441"
+        viewBox="0 0 197 441"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 187H236V441H55C24.6243 441 0 416.376 0 386V187Z"
+          fill="#FFE6B1"
+        />
+        <circle cx="171" cy="171" r="171" fill="#FFE6B1" />
+      </svg>
     </section>
-    
 
-    <section id="contact-me" class="container-fluid mb-5">
+    <section id="contact-me" class="position-relative">
       <div class="custom-divider container-fluid">
-        <span> CONTACT ME </span>
+        <span> Contact ME </span>
       </div>
-
-
-
       <div class="contact-me-content">
-        <div class="position-relative h-100">
-          <img id="contact-me-img-1" src="./src/img/contactme-bg-clock.png" class="img-fluid" alt="">
-          <img id="contact-me-img-2" src="./src/img/contactme-bg-cake.png" class="img-fluid" alt="">
-          <form class="contact-me-form">
-            <h3>GET YOUR TASTY TREAT<br/>  SPECIAL MADE<br/> FOR YOUR LOVED ONES</h3>
-            <div class="form-group">
-              <input type="text" required="required" />
-              <label for="input" class="control-label">Your Name</label
-              ><i class="bar"></i>
+        <div class="contact-me-content-bg-image">
+          <img
+            src="./src/img/contactme-bg-mobile.svg"
+            alt="bgimage"
+            class="hide-from-desktop"
+          />
+          <img
+            src="./src/img/contactme-bg.svg"
+            alt="bgimage"
+            class="hide-from-mobile"
+          />
+        </div>
+
+
+        <div class="contact-me-content-text ">
+          <div class="contact-me-content-text-images">
+            <div class="">
+              <img src="./src/img/contactme-bg-clock.png"  id="contact-me-img-1" alt="" />
             </div>
-            <div class="form-group">
-              <input type="text" required="required" />
-              <label for="input" class="control-label">Your Phone Number(whatsapp)*</label
-              ><i class="bar"></i>
+            <div class="">
+              <img src="./src/img/contactme-bg-cake.png" id="contact-me-img-2" alt="" />
             </div>
-            <div class="form-group">
-              <input type="text" required="required" />
-              <label for="input" class="control-label">Your Phone Number</label
-              ><i class="bar"></i>
-            </div>
-            <div class="form-group">
-              <textarea required="required"></textarea>
-              <label for="textarea" class="control-label">Message</label
-              ><i class="bar"></i>
-            </div>
-            <button type="submit" class="contact-me-submit-btn">SUBMIT 
-              <img src="/src/img/contactme-btn-arrow.png" alt="">
-            </button>
-          </form>
+          </div>
+          <div class="center-div">
+            <form class="contact-me-form">
+              <h3>
+                GET YOUR TASTY TREAT<br />
+                SPECIAL MADE<br />
+                FOR YOUR LOVED ONES
+              </h3>
+              <div class="form-group">
+                <input type="text" required="required" />
+                <label for="input" class="control-label">Your Name</label
+                ><i class="bar"></i>
+              </div>
+              <div class="form-group">
+                <input type="text" required="required" />
+                <label for="input" class="control-label"
+                  >Your Phone Number(whatsapp)*</label
+                ><i class="bar"></i>
+              </div>
+              <div class="form-group">
+                <input type="text" required="required" />
+                <label for="input" class="control-label"
+                  >Your Phone Number</label
+                ><i class="bar"></i>
+              </div>
+              <div class="form-group">
+                <textarea required="required"></textarea>
+                <label for="textarea" class="control-label">Message</label
+                ><i class="bar"></i>
+              </div>
+              <button type="submit" class="contact-me-submit-btn">
+                SUBMIT
+                <img src="/src/img/contactme-btn-arrow.png" alt="" />
+              </button>
+            </form>
+          </div>
+        
+
+
         </div>
       </div>
     </section>
-
-    <footer class="container-fluid mt-5 px-4 footer-custom">
-      <div class="row">
-        <div class="col col-md-4">
-          <img src="./src/img/sugarcrafted.png" class="img-fluid"/>
-        </div>
-        <div class="col col-md-4 w-fit mx-auto">
-          <ul>
-            <h3>Quick Links</h3>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#"> Pâtisserie</a>
-            <a href="#"> FAQ's</a>
-          </ul>
-        </div>
-        <div class="col col-md-4 w-fit mx-auto">
-          <ul>
-            <h3>Stay Connected On</h3>
-            <a href="#">Instagram</a>
-            <a href="mailto:test@gmail.com">test@gmail.com</a>
-          </ul>
-        </div>
-      </div>
-      <div class="row my-5 container">
-        <div class="col ">
-          <p class="w-fit mx-auto footer-end-text">
-            Copyright © 2021 sugarcrafted. All rights reserved.
-          </p>
-        </div>
-        <div class="col ">
-          <p class="w-fit mx-auto footer-end-text">
-            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies
-          </p>
-        </div>
-      </div>
-    </footer>
-
   </body>
 </html>

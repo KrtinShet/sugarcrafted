@@ -47,20 +47,64 @@ input[type="reset"] {
   cursor: pointer;
   outline: inherit;
 }
-.landing {
+/* CUSTOM NAVBAR STARTS HERE */
+nav#custom-navbar {
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 14px;
+  top: 0.9rem;
+  background-color: #fffdfa;
+  box-shadow: 18px 18px 50px -10px rgba(255, 152, 31, 0.4);
+  max-height: 80px;
+  align-items: center;
+}
+#custom-nav-logo {
+  height: 50px;
+  width: auto;
+  margin: 0 1.5rem !important;
+  /* padding: 0 2rem !important; */
+}
+
+#custom-nav-links {
+  font-family: "Sen", sans-serif;
+  margin: 0 1.2rem !important;
+  width: fit-content;
+}
+.custom-nav-link {
+  color: #482625;
+  margin: 0 1rem !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: transparent solid 5px;
+  padding-bottom: 0.25rem !important;
+}
+
+.custom-nav-link:hover,
+.custom-nav-link-active {
+  border-bottom: 3px solid #fa897b;
+  border-radius: 6px;
+}
+
+/* CUSTOM NAVBAR FOR DESKTOP ENDS HERE */
+
+/*  LANDING PAGE FOR DESKTOP VIEW */
+#landing-section {
   max-width: 100vw;
   width: 100% !important;
-  height: calc(0.5625 * 100vw);
+  height: calc(0.5225 * 100vw);
   background-image: url(./../img/landing-bg.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative !important;
 }
 
 #banner {
   z-index: 500;
   display: flex;
   align-items: center;
+  top: 30vw;
 }
 
 #banner-btn-arrow {
@@ -97,9 +141,12 @@ input[type="reset"] {
 img.banner-img {
   width: calc(5rem + 50 * ((100vw - 100px) / 150)) !important;
 }
+/* LANDING PAGE ENDS HERE */
 
+/* ABOUT ME PAGE STARTS HERE */
 #about-me {
   margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
 }
 h2#about-me-heading {
   font-family: "hansief";
@@ -114,64 +161,44 @@ svg#abt-cake {
   width: calc(2rem + 10 * ((100vw - 100px) / 150));
   height: auto;
 }
-
-.aboutme-content {
+.about-me-content {
   position: relative;
-  top: 4rem;
-}
-/* svg#about-me-heart {
-  width: calc(2rem + 10 * ((100vw - 100px) / 150));
-} */
-#about-me-text-container {
-  padding: 0.75rem 1rem !important;
-  margin-left: 4rem !important;
-}
-
-.about-me-p-heading {
-  font-family: "gilroy", sans-serif !important;
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-top: 0.4rem !important;
-  margin-bottom: 0.75rem !important;
-}
-#about-me-text-container p {
-  margin-bottom: 0.6rem !important;
-}
-.about-me-p-text-style {
-  font-family: "Poppins", sans-serif !important;
-  font-size: 0.65rem;
-  line-height: 1.8;
-  text-transform: capitalize;
-}
-
-#social-links-abtme {
-  position: absolute;
-  top: 50%;
-  left: 33%;
-  transform: translate(-50%, -50%);
-  background: #fff5f5;
-  border: 0.6px solid #000000;
-  border-radius: 10px;
-  width: min-content;
-  padding: 0.7rem 0.5rem !important;
-  height: 50%;
-}
-
-#social-links-abtme ul {
-  padding: 1.25rem 1rem;
-  height: 100%;
+  top: 3.5rem;
   display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
+  align-content: center;
+  width: 100% !important;
+  margin: 0 auto !important;
+  justify-content: space-between;
+  box-shadow: 10px 15px 30px rgba(250, 137, 123, 0.3);
+}
+.about-me-content-image {
+  flex: 1;
+  width: 45% !important;
+}
+.about-me-content-text-container {
+  flex: 2;
+  width: 55% !important;
+  font-size: 0.55rem !important;
+  font-family: "poppins", sans-serif;
+  position: relative;
+  left: 40%;
+  transform: translateX(-50%);
+}
+.about-me-text-header {
+  font-size: 0.75rem !important;
+  font-weight: bold;
+  margin-bottom: 1rem !important;
+}
+.about-me-text-paragraph {
+  margin-bottom: 0.5rem !important;
 }
 
-#social-links-abtme svg {
-  width: 2rem !important;
-}
+/* ABOUT ME PAGE ENDS HERE */
 
-/******************************* START CAKE GALLERY *******************************/
+/******************************* START TESTIMONIALS *******************************/
 #testmonials {
   margin-top: 10rem !important;
 }
@@ -179,7 +206,7 @@ svg#abt-cake {
   margin-top: calc(0.1rem + 10 * ((100vw - 100px) / 300));
   width: calc(1.5rem + 10 * ((100vw - 100px) / 2000));
 }
-/******************************* END CAKE GALLERY *******************************/
+/******************************* END TESTMONIALS *******************************/
 
 /******************************* START CAKE GALLERY *******************************/
 
@@ -192,6 +219,82 @@ svg#abt-cake {
   width: calc(2rem + 10 * ((100vw - 100px) / 150));
 }
 /******************************* END CAKE GALLERY *******************************/
+
+/******************************* START CONTACT ME *******************************/
+#contact-me {
+  width: 100vw;
+  height: calc(0.5 * 100vw);
+  margin-bottom: 3rem !important;
+  padding-bottom: 2rem !important;
+  position: relative;
+}
+.contact-me-content {
+  max-width: 1500px !important;
+  width: 100%;
+  height: 100%;
+}
+.contact-me-content-bg-image {
+  max-width: 1500px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact-me-content-bg-image img {
+  width: 100%;
+  height: auto;
+}
+.contact-me-content-text {
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#contact-me-img-1 {
+  position: relative;
+  bottom: 2rem !important;
+  max-width: 25rem;
+  width: calc(9rem + 20 * ((100vw - 100px) / 150));
+  height: auto;
+}
+#contact-me-img-2 {
+  position: relative;
+  top: 8rem !important;
+  right: 5rem;
+  max-width: 25rem;
+  width: calc(10rem + 20 * ((100vw - 100px) / 150));
+  height: auto;
+}
+.contact-me-form {
+  margin-left: 4rem !important;
+  max-width: 25rem;
+  width: 25rem;
+}
+.contact-me-form h3 {
+  font-size: 2.25rem;
+  font-family: "hansief", sans-serif;
+  color: #f24880;
+  margin-bottom: 1.2rem !important;
+}
+.form-group {
+  margin-top: 3rem !important;
+}
+.contact-me-submit-btn {
+  font-family: "gilroy", sans-serif;
+  background: linear-gradient(84.04deg, #eb361f -1.07%, #fa897b 100%);
+  border-radius: 12px;
+  width: 10rem;
+  height: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.09em;
+  margin-top: 5rem !important;
+  color: #ffffff;
+}
+/******************************* END CONTACT ME *******************************/
 
 /******************************* CUSTOM CARD 1 *******************************/
 .custom-card-1 {
@@ -343,235 +446,339 @@ svg#abt-cake {
 
 /******************************* END CUSTOM CARD 2 *******************************/
 
-/******************************* START CONTACT ME  *******************************/
-.contact-me{
-  margin-bottom: 3rem !important;
-  padding-bottom: 2rem !important;
-}
-.contact-me-content {
-  position: relative;
-  background-image: url("./../img/contactme-bg.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  max-width: 100vw;
-  width: 100% !important;
-  height: calc(0.5625 * 100vw);
-  margin-top: 1rem !important;
-}
-.contact-me-content-container {
-  position: relative;
-}
-#contact-me-img-1 {
-  position: absolute;
-  top: 5%;
-  left: 20%;
-  width: 15rem !important;
-}
-#contact-me-img-2 {
-  position: absolute;
-  bottom: 5%;
-  left: 20%;
-  width: 15rem !important;
-}
-.contact-me-form {
-  position: absolute;
-  right: 15% !important;
-  top: 4% !important;
-  width: 15rem;
-}
-.contact-me-form h3 {
-  font-size: 1.25rem;
-  font-family: "hansief", sans-serif;
-  color: #f24880;
-  margin-bottom: 1.2rem !important;
-}
-.form-group {
-  margin-top: 2rem !important;
-}
-.contact-me-submit-btn {
-  font-family: "gilroy", sans-serif;
-  background: linear-gradient(84.04deg, #eb361f -1.07%, #fa897b 100%);
-  border-radius: 12px;
-  width: 7rem;
-  height: 2.45rem;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.75rem !important;
-  letter-spacing: 0.09em;
-  margin-top: 1rem !important;
-  color: #ffffff;
+/* MEDIA QUERIES START HERE */
+@media (max-width: 575px) {
+  #landing-section {
+    position: relative;
+    width: 100vw;
+    height: calc(1.85 * 100vw);
+    background: none;
+    /* background-color: red; */
+  }
+  nav#custom-navbar {
+    display: none;
+  }
+  .mobile-sugarcrafted-logo {
+    position: absolute;
+    max-height: 5rem;
+    height: calc(0.25 * 100vw);
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .mobile-landingbg-waves {
+    position: absolute;
+    bottom: 0;
+    height: 15rem;
+    left: -10% !important;
+  }
+  .mobile-landing-cake {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    height: calc(1.25 * 100vw);
+    /* height: 40rem; */
+  }
+
+  .mobile-banner-content h1 {
+    font-family: "hansief", sans-serif;
+    /* font-size: 2rem; */
+    font-size: calc(32px + (16 * (100vw - 200px) / 257));
+    margin-bottom: 1.5rem !important;
+  }
+  .mobile-banner-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: calc(10px + (7 * (100vw - 200px) / 257));
+    /* font-size: 1.05rem; */
+    margin-bottom: 1.5rem !important;
+  }
+  .mobile-button-banner {
+    font-size: calc(10px + (7 * (100vw - 200px) / 257));
+  }
+  #about-me-heading {
+    font-size: 2rem !important;
+  }
+  .hide-from-mobile {
+    display: none !important;
+  }
+  .about-me-content {
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    box-shadow: none;
+  }
+  .about-me-content-image {
+    height: 20rem !important;
+    width: 20rem !important;
+    box-shadow: 10px 15px 30px rgba(250, 137, 123, 0.3) !important;
+  }
+  .about-me-content-image img {
+    border: 10px solid #fff !important;
+    border-radius: 5px;
+    height: 20rem !important;
+    width: 20rem !important;
+    object-fit: cover !important;
+  }
+  .about-me-content-text-container {
+    background: #fff;
+    left: 0%;
+    transform: translateX(0);
+    min-width: fit-content !important;
+    max-width: 20rem !important;
+    margin-top: 3rem !important;
+    width: calc(0.8 * 100vw) !important;
+    padding: 1rem !important;
+    height: 5rem !important;
+    overflow-y: auto;
+    margin: 0 auto !important;
+    box-shadow: 4px 15px 30px rgba(250, 137, 123, 0.3) !important;
+    font-size: 0.75rem !important;
+  }
+  .about-me-text-header {
+    font-size: 1.5rem !important;
+  }
+  .about-me-text-paragraph-container {
+    height: 15rem !important;
+    width: 100%;
+  }
+  .about-me-text-paragraph {
+    font-size: 0.95rem !important;
+    width: 15rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+
+
+.contact-me-content-text{}
+.contact-me-content-text-images{}
+#contact-me-img-1{}
+#contact-me-img-2{}
+.contact-me-form{}
+.contact-me-form h3{}
+.form-group{}
+.contact-me-submit-btn{}
+
+
+
+
+
+
+
+
+
 }
 
-@media (min-width: 850px) {
+@media (min-width: 576px) {
+  .hide-from-desktop {
+    display: none !important;
+  }
+  nav#custom-navbar {
+    top: 1.4rem;
+  }
+  #custom-nav-logo {
+    height: 50px;
+    margin: 0 1rem !important;
+  }
+  #custom-nav-links {
+    margin: 0 1rem !important;
+  }
+  .custom-nav-link {
+    margin: 0 0.75rem !important;
+    font-size: 0.7rem;
+  }
+  .contact-me-content-text {
+    top: 78%;
+    left: 50%;
+  }
   #contact-me-img-1 {
-    top: 5%;
-    left: 20%;
-    width: 15rem !important;
+    top: 1rem !important;
+    left: 4rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
   }
   #contact-me-img-2 {
-    bottom: 5%;
-    left: 15%;
-    width: 15rem !important;
+    top: 6rem !important;
+    left: 1.4rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
   }
   .contact-me-form {
-    right: 18% !important;
-    top: 5% !important;
-    width: 15rem;
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 16rem;
   }
   .contact-me-form h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem !important;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem !important;
   }
   .form-group {
-    margin-top: 2.2rem !important;
+    margin-top: 1.6rem !important;
   }
   .contact-me-submit-btn {
-    width: 7.25rem;
-    height: 2.7rem;
-    margin-top: 1rem !important;
-  }
-}
-@media (min-width: 950px) {
-  #contact-me-img-1 {
-    top: 5%;
-    left: 20%;
-    width: 15rem !important;
-  }
-  #contact-me-img-2 {
-    bottom: 4% !important;
-    left: 15% !important;
-    width: 18rem !important;
-  }
-  .contact-me-form {
-    right: 18% !important;
-    top: 8% !important;
-    width: 18rem !important;
-  }
-  .contact-me-form h3 {
-    font-size: 1.65rem;
-    margin-bottom: 1.4rem !important;
-  }
-  .form-group {
-    margin-top: 2.5rem !important;
-  }
-  .contact-me-submit-btn {
-    width: 7.25rem;
-    height: 2.7rem;
-    margin-top: 1.75rem !important;
-  }
-}
-@media (min-width: 1000px) {
-  #contact-me-img-1 {
-    top: 10%;
-    left: 20%;
-    width: 20rem !important;
-  }
-  #contact-me-img-2 {
-    bottom: 4% !important;
-    left: 15% !important;
-    width: 22rem !important;
-  }
-  .contact-me-form {
-    right: 18% !important;
-    top: 10% !important;
-    width: 20rem !important;
-  }
-  .contact-me-form h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.4rem !important;
-  }
-  .form-group {
-    margin-top: 2.75rem !important;
-  }
-  .contact-me-submit-btn {
-    width: 7.25rem;
-    height: 2.7rem;
-    margin-top: 1.75rem !important;
-  }
-}
-@media (min-width: 1200px) {
-  .contact-me-form {
-    right: 22% !important;
-    top: 10% !important;
-    width: 22rem !important;
-  }
-  .contact-me-form h3 {
-    font-size: 2rem;
-    margin-bottom: 1.7rem !important;
-  }
-  .form-group {
-    margin-top: 3rem !important;
-  }
-  .contact-me-submit-btn {
-    width: 7.25rem;
-    height: 2.7rem;
+    border-radius: 12px;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 0.85rem !important;
     margin-top: 2rem !important;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 600px) {
+  .contact-me-content-text {
+    top: 78%;
+    left: 50%;
+  }
   #contact-me-img-1 {
-    top: 10%;
-    left: 20%;
-    width: 24rem !important;
+    top: 3rem !important;
+    left: 4rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
   }
   #contact-me-img-2 {
-    bottom: 4% !important;
-    left: 15% !important;
-    width: 26rem !important;
+    top: 6rem !important;
+    left: 3rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
   }
   .contact-me-form {
-    right: 22% !important;
-    top: 15% !important;
-    width: 22rem !important;
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 10rem;
   }
   .contact-me-form h3 {
-    font-size: 2rem;
-    margin-bottom: 2rem !important;
+    font-size: 1rem;
+    margin-bottom: 1rem !important;
   }
   .form-group {
-    margin-top: 3.5rem !important;
+    margin-top: 1.6rem !important;
+  }
+  .form-group input {
+    font-size: 0.7rem !important;
   }
   .contact-me-submit-btn {
-    width: 7.25rem;
-    height: 2.7rem;
-    margin-top: 3rem !important;
+    border-radius: 12px;
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.6rem !important;
+    margin-top: 1rem !important;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  nav#custom-navbar {
+    top: 1.3rem;
+  }
+  #custom-nav-logo {
+    height: 60px;
+    margin: 0 2rem !important;
+  }
+  #custom-nav-links {
+    margin: 0 2rem !important;
+  }
+  .custom-nav-link {
+    margin: 0 1.1rem !important;
+    font-size: 0.8rem;
+  }
+  #about-me-heading {
+    font-size: 1.5rem !important;
+  }
+  .about-me-content {
+    top: 4.5rem;
+  }
+  .about-me-content-text-container {
+    font-size: 0.75rem !important;
+  }
+  .about-me-text-header {
+    font-size: 1rem !important;
+  }
+  .about-me-text-paragraph {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .contact-me-content-text {
+    top: 78%;
+    left: 50%;
+  }
+  #contact-me-img-1 {
+    top: 1rem !important;
+    left: 4rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  #contact-me-img-2 {
+    top: 6rem !important;
+    left: 0.5rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  .contact-me-form {
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 18rem;
+  }
+  .contact-me-form h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem !important;
+  }
+  .form-group {
+    margin-top: 2rem !important;
+  }
+  .contact-me-submit-btn {
+    border-radius: 12px;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 0.85rem !important;
+    margin-top: 2rem !important;
   }
 }
 
-/******************************* END CONTACT ME  *******************************/
-/******************************* START FOOTER  *******************************/
-.footer-custom{
-  font-family: "Sen", sans-serif;
-  color: var(--primary) !important;
+@media (min-width: 900px) {
+  .contact-me-content-text {
+    top: 73%;
+    left: 50%;
+  }
+  #contact-me-img-1 {
+    top: 2rem !important;
+    left: 4rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  #contact-me-img-2 {
+    top: 10rem !important;
+    left: 0.5rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  .contact-me-form {
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 24rem;
+  }
+  .contact-me-form h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem !important;
+  }
+  .form-group {
+    margin-top: 2.7rem !important;
+  }
+  .contact-me-submit-btn {
+    border-radius: 12px;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 0.85rem !important;
+    margin-top: 2rem !important;
+  }
 }
-.footer-custom img {
-  margin-left: 2rem !important;
-  width: 80%;
-  max-width: 23rem;
-}
-.footer-custom ul {
-  display: flex;
-  flex-direction: column;
-}
-.footer-custom ul h3{
-  font-size: 1.5rem;
-  margin-bottom: 1rem !important;
-}
-.footer-custom a {
-  font-size: 0.85rem;
-  margin: 0.2rem 0 !important;
-}
-.footer-end-text{
-  font-size: 0.5rem;
-}
-/******************************* END FOOTER  *******************************/
 
-/******************************* MEDIA QUERIS *******************************/
-@media (min-width: 576px) {
-  /* THIS IS FOR THE MOBILE VIEW */
-}
 @media (min-width: 992px) {
+  nav#custom-navbar {
+    top: 1.45rem;
+  }
+  #custom-nav-logo {
+    height: 68px;
+    margin: 0 2rem !important;
+  }
+  #custom-nav-links {
+    margin: 0 2.75rem !important;
+  }
+  .custom-nav-link {
+    margin: 0 1.7rem !important;
+    font-size: 0.95rem;
+  }
   #bnr-wlcm-txt {
     font-size: 2.5rem;
     margin-bottom: 1.15rem !important;
@@ -584,37 +791,109 @@ svg#abt-cake {
     padding: 0.6rem 1.2rem !important;
     font-size: 1rem;
   }
-
-  .aboutme-content {
-    top: 6rem !important;
+  #about-me-heading {
+    font-size: 1.75rem !important;
   }
-
-  #about-me-text-container {
-    padding: 0.75rem 1rem !important;
-    margin-left: 4rem !important;
-  }
-  .about-me-p-heading {
-    font-size: 1.5rem;
-    margin-top: 1.5rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-  #about-me-text-container p {
-    margin-bottom: 0.95rem !important;
-  }
-  .about-me-p-text-style {
+  .about-me-content-text-container {
     font-size: 0.9rem !important;
   }
-
-  #social-links-abtme svg {
-    width: 2.5rem !important;
+  .about-me-text-header {
+    font-size: 1.25rem !important;
   }
-  .footer-end-text{
-    font-size: 0.7rem;
+  .about-me-text-paragraph {
+    margin-bottom: 0.65rem !important;
   }
+  .about-me-content {
+    top: 5rem;
+  }
+  .contact-me-content-text {
+    top: 73%;
+    left: 50%;
+  }
+  #contact-me-img-1 {
+    top: 2rem !important;
+    left: 3rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  #contact-me-img-2 {
+    top: 12rem !important;
+    right: 0rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  .contact-me-form {
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 24rem;
+  }
+  .contact-me-form h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem !important;
+  }
+  .form-group {
+    margin-top: 2.7rem !important;
+  }
+  .contact-me-submit-btn {
+    border-radius: 12px;
+    width: 9rem;
+    height: 2.8rem;
+    font-size: 1rem !important;
+    margin-top: 3rem !important;
+  }
+}
 
+@media (min-width: 1100px) {
+  .contact-me-content-text {
+    top: 70%;
+    left: 50%;
+  }
+  #contact-me-img-1 {
+    top: 2rem !important;
+    left: 3rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  #contact-me-img-2 {
+    top: 12rem !important;
+    right: 1rem;
+    width: calc(7rem + 20 * ((100vw - 100px) / 150));
+  }
+  .contact-me-form {
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 24rem;
+  }
+  .contact-me-form h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem !important;
+  }
+  .form-group {
+    margin-top: 2.7rem !important;
+  }
+  .contact-me-submit-btn {
+    border-radius: 12px;
+    width: 9rem;
+    height: 2.8rem;
+    font-size: 1rem !important;
+    letter-spacing: 0.09em;
+    margin-top: 3rem !important;
+    color: #ffffff;
+  }
 }
 
 @media (min-width: 1200px) {
+  nav#custom-navbar {
+    top: 2rem;
+  }
+  #custom-nav-logo {
+    height: 80px;
+    margin: 0 2rem !important;
+  }
+  #custom-nav-links {
+    margin: 0 3rem !important;
+  }
+  .custom-nav-link {
+    margin: 0 2rem !important;
+    font-size: 1.1rem;
+  }
   #bnr-wlcm-txt {
     font-size: 2.9rem;
     margin-bottom: 1.35rem !important;
@@ -630,65 +909,71 @@ svg#abt-cake {
   #about-me-heading {
     font-size: 2rem !important;
   }
-  /* #about-me-text-container {
-    padding: 0.75rem 1rem !important;
-    margin-left: 4rem !important;
-  } */
-  .about-me-p-heading {
-    font-size: 1.65rem;
-    margin-top: 2rem !important;
-    margin-bottom: 1.15rem !important;
+  .about-me-content {
+    top: 5.5rem;
   }
-  #about-me-text-container p {
-    margin-bottom: 1rem !important;
+  .about-me-content-text-container {
+    font-size: 1.15rem !important;
   }
-  .about-me-p-text-style {
-    font-size: 1rem !important;
+  .about-me-text-header {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
+  .about-me-text-paragraph {
+    margin-bottom: 0.75rem !important;
+  }
+}
 
-  #social-links-abtme svg {
-    width: 2.75rem !important;
+@media (min-width: 1300px) {
+  #contact-me {
+    position: relative;
   }
-
-  /******************************* CUSTOM CARD 1 *******************************/
-  .custom-card-1 {
-    --cc1w: 350px;
-    padding: 0.5rem 0.75rem !important;
+  .contact-me-content {
+    max-width: 1500px !important;
+    width: 100%;
+    height: 100%;
   }
-
-  .custom-card-1-heading {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .custom-card-1-img {
-    width: 6.5rem;
-  }
-
-  .custom-card-1-lead-text {
-    font-size: 0.9rem;
-  }
-  .custom-card-1-body::before {
-    top: 55%;
+  .contact-me-content-text {
+    display: flex;
+    position: absolute;
+    top: 70%;
     left: 50%;
-    background-size: 4.8rem !important;
+    transform: translate(-50%, -50%);
   }
-
-  #start-comma {
-    top: -0.6rem;
-    left: -0.6rem;
-    height: 0.75rem;
+  #contact-me-img-1 {
+    bottom: 0 !important;
+    width: calc(8rem + 20 * ((100vw - 100px) / 150));
   }
-  #end-comma {
-    top: 90%;
-    left: 75%;
-    width: 0.75rem;
+  #contact-me-img-2 {
+    top: 10rem !important;
+    right: 4rem;
+    width: calc(8rem + 20 * ((100vw - 100px) / 150));
   }
-  .custom-card-1-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    padding: 0.25rem 0.5rem !important;
+  .contact-me-form {
+    margin-left: 6rem !important;
+    max-width: 25rem;
+    width: 24rem;
   }
-  /******************************* END CUSTOM CARD 1 *******************************/
+  .contact-me-form h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1.2rem !important;
+  }
+  .form-group {
+    margin-top: 3rem !important;
+  }
+  .contact-me-submit-btn {
+    font-family: "gilroy", sans-serif;
+    background: linear-gradient(84.04deg, #eb361f -1.07%, #fa897b 100%);
+    border-radius: 12px;
+    width: 9rem;
+    height: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.09em;
+    margin-top: 5rem !important;
+    color: #ffffff;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -704,65 +989,28 @@ svg#abt-cake {
     padding: 1rem 1.6rem !important;
     font-size: 1.4rem;
   }
-
   #about-me-heading {
     font-size: 2.25rem !important;
   }
-  .about-me-p-heading {
-    margin-top: 2.5rem !important;
-    margin-bottom: 1.25rem !important;
+  .about-me-content-text-container {
+    font-size: 1.35rem !important;
   }
+  .about-me-text-header {
+    font-size: 2rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+  .about-me-text-paragraph {
+    margin-bottom: 0.85rem !important;
+  }
+  .about-me-content {
+    top: 6.5rem;
+  }
+  .contact-me-content-text {
+    top: 40%;
+    left: 50%;
+  }
+}
 
-  #about-me-text-container p {
-    margin-bottom: 0.9rem !important;
-  }
-
-  .about-me-p-text-style {
-    font-size: 1.15rem !important;
-  }
-  #social-links-abtme svg {
-    width: 3rem !important;
-  }
-
-  /******************************* CUSTOM CARD 1 *******************************/
-  .custom-card-1 {
-    --cc1w: 400px;
-    padding: 0.5rem 0.75rem !important;
-  }
-
-  .custom-card-1-heading {
-    font-size: 1.45rem;
-    margin-bottom: 0.5rem;
-  }
-  .custom-card-1-img {
-    width: 6.5rem;
-  }
-
-  .custom-card-1-lead-text {
-    font-size: 1rem;
-  }
-  .custom-card-1-body::before {
-    background-size: 5.6rem !important;
-  }
-
-  #start-comma {
-    top: -0.6rem;
-    left: -0.6rem;
-    height: 0.75rem;
-  }
-  #end-comma {
-    top: 90%;
-    left: 80%;
-    width: 0.75rem;
-  }
-  .custom-card-1-text {
-    font-size: 1.05rem;
-    line-height: 1.5;
-    padding: 0.25rem 0.5rem !important;
-    text-align: center;
-  }
-  /******************************* END CUSTOM CARD 1 *******************************/
-  .footer-end-text{
-    font-size: 0.8rem;
-  }
+.z-index-n {
+  z-index: 0 !important;
 }
