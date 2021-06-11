@@ -618,6 +618,7 @@ svg#abt-cake {
   .mobile-banner-content h1 {
     font-family: "hansief", sans-serif;
     /* font-size: 2rem; */
+    color: #482625;
     font-size: calc(32px + (16 * (100vw - 200px) / 257));
     margin-bottom: 1.5rem !important;
   }
