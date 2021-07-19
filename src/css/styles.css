@@ -807,6 +807,9 @@ svg#abt-cake {
     font-size: 0.85rem !important;
     margin-top: 2rem !important;
   }
+  .about-me-text-paragraph-container {
+    width: 90% !important;
+  }
 }
 @media (min-width: 600px) {
   .contact-me-content-text {
@@ -862,6 +865,10 @@ svg#abt-cake {
   .custom-footer-main ul a {
     font-size: 0.75rem;
   }
+  .about-me-text-paragraph-container {
+    width: 85% !important;
+  }
+
   .about-me-text-paragraph {
     font-size: 0.5rem;
   }
@@ -1009,6 +1016,11 @@ svg#abt-cake {
   .about-me-text-header {
     font-size: 1.15rem !important;
   }
+  .about-me-text-paragraph-container {
+    width: 80% !important;
+    height: 100%;
+  }
+
   .about-me-text-paragraph {
     margin-bottom: 0.45rem !important;
   }
