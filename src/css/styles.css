@@ -286,10 +286,10 @@ svg#abt-cake {
 .about-me-text-header {
   font-size: 0.75rem !important;
   font-weight: bold;
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.75rem !important;
 }
 .about-me-text-paragraph {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.25rem !important;
 }
 
 /* ABOUT ME PAGE ENDS HERE */
@@ -671,16 +671,16 @@ svg#abt-cake {
     font-size: 0.75rem !important;
   }
   .about-me-text-header {
-    font-size: 1.5rem !important;
+    font-size: 1.35rem !important;
   }
   .about-me-text-paragraph-container {
     height: 15rem !important;
     width: 100%;
   }
   .about-me-text-paragraph {
-    font-size: 0.95rem !important;
+    font-size: 0.8rem !important;
     width: 15rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
   }
   .contact-me-content-bg-image {
     display: none !important;
@@ -862,6 +862,9 @@ svg#abt-cake {
   .custom-footer-main ul a {
     font-size: 0.75rem;
   }
+  .about-me-text-paragraph {
+    font-size: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -892,7 +895,8 @@ svg#abt-cake {
     font-size: 1rem !important;
   }
   .about-me-text-paragraph {
-    margin-bottom: 0.5rem !important;
+    font-size: 0.65rem !important;
+    margin-bottom: 0.2rem !important;
   }
 
   .contact-me-content-text {
@@ -1003,10 +1007,10 @@ svg#abt-cake {
     font-size: 0.9rem !important;
   }
   .about-me-text-header {
-    font-size: 1.25rem !important;
+    font-size: 1.15rem !important;
   }
   .about-me-text-paragraph {
-    margin-bottom: 0.65rem !important;
+    margin-bottom: 0.45rem !important;
   }
   .about-me-content {
     top: 5rem;
@@ -1131,11 +1135,12 @@ svg#abt-cake {
     font-size: 1.15rem !important;
   }
   .about-me-text-header {
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
     margin-bottom: 1.5rem !important;
   }
   .about-me-text-paragraph {
-    margin-bottom: 0.75rem !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.55rem !important;
   }
   .footer-custom {
     top: 14rem;
@@ -1223,11 +1228,12 @@ svg#abt-cake {
     font-size: 1.35rem !important;
   }
   .about-me-text-header {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
   .about-me-text-paragraph {
-    margin-bottom: 0.85rem !important;
+    font-size: 1.12rem !important;
+    margin-bottom: 0.55rem !important;
   }
   .about-me-content {
     top: 6.5rem;
